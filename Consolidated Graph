@@ -1,3 +1,11 @@
+from dateutil.parser import parse
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+
+
 
 USdf = pd.read_excel(r'C:\Users\camer\Desktop\USA_CO2_emissions.xlsx')
 INdf = pd.read_excel(r'C:\Users\camer\Desktop\USA_CO2_emissions.xlsx')
