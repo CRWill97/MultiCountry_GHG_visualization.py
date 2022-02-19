@@ -1,0 +1,12 @@
+
+USdf = pd.read_excel(r'C:\Users\camer\Desktop\USA_CO2_emissions.xlsx')
+INdf = pd.read_excel(r'C:\Users\camer\Desktop\USA_CO2_emissions.xlsx')
+CHdf = pd.read_excel(r'C:\Users\camer\Desktop\USA_CO2_emissions.xlsx')
+
+for frame in [USdf, INdf, CHdf]:
+    plt.plot(frame['Year'], frame['CO2_and_GHG_Emissions_tonnes'])
+    red_patch = mpatches.Patch(color='red', label = 'USA Pollution')
+    light_patch = mpatches.Patch(color='cadetblue', label='China Pollution')
+    blue_patch = mpatches.Patch(color='dodgerblue', label='India Pollution')
+    plt.legend(handles=[red_patch,light_patch,blue_patch])
+    plt.savefig('USA_China_India_pollution.png')
